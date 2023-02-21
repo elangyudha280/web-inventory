@@ -9,6 +9,7 @@ import CardRegister from './Component/ComponentLogin/CardRegister'
 
 // import component Login
 import ContainerLogin from './Component/ContainerLogin'
+import { ProtectedLogin } from './Protected/ProtectedLogin'
 
 
 
@@ -19,12 +20,18 @@ function App() {
      
       <Router>  
           <Routes>
-            <Route path='/' element={<ContainerLogin/>}>
+            <Route  element={<ProtectedLogin/>}>
+              <Route path='/' element={<ContainerLogin/>}>
                   <Route path='/' element={<CardLogin/>}/>
                   <Route path='register' element={<CardRegister/>}/>
+              </Route>
             </Route>
+
+            <Route path='/dashboard' element={<h1>halaman dashboard</h1>}/>
+
           </Routes>
       </Router>
+    
 
     </div>
   )
