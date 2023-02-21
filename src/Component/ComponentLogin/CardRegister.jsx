@@ -29,7 +29,6 @@ const CardRegister = ()=>{
                 </form>
                 <span className="block text-center text-[0.8em] text-white mt-1">Have account ?</span>
             </div> 
-
     )
 }
 
