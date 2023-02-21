@@ -8,10 +8,10 @@ const Login = ()=>{
         <section className="container-login overflow-y-auto overflow-x-hidden relative w-full h-screen bg-[url('../images/cloudy.svg')] bg-center bg-cover bg-no-repeat grid place-items-center p-3 ">
 
             {/* component login */}
-             {/* <CardLogin/> */}
+             <CardLogin/>
 
             {/* component Register */}
-              <CardRegister/>  
+              {/* <CardRegister/>   */}
         </section>  
     )
 }
