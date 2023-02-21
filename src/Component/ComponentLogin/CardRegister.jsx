@@ -1,7 +1,14 @@
 
 
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const CardRegister = ()=>{
+
+        useEffect(()=>{
+                document.title = 'Register Page'
+        },[])
+        
     return (
             <div className="card-register w-full min-[420px]:w-[400px]  p-4 rounded-md">
                 <h3 className="title-register text-2xl text-white">Register</h3>
@@ -27,7 +34,7 @@ const CardRegister = ()=>{
                         Register
                     </button>
                 </form>
-                <span className="block text-center text-[0.8em] text-white mt-1">Have account ?</span>
+                <Link to='/' className="block text-center text-[0.8em] text-white mt-1">Have account ?</Link>
             </div> 
     )
 }

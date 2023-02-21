@@ -1,7 +1,12 @@
 
-
-
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 const CardLogin = ()=>{
+
+    useEffect(()=>{
+        document.title = 'Login Page'
+    },[])
+    
     return (
          <div className="card-login w-full min-[420px]:w-[400px]  p-4 rounded-md">
                 <h3 className="title-login text-2xl text-white">Login</h3>
@@ -21,7 +26,7 @@ const CardLogin = ()=>{
                     </button>
                 </form>
 
-                <span className="block text-center text-[0.8em] text-white mt-1">Dont have account ?</span>
+                <Link to='/register' className="block text-center text-[0.8em] text-white mt-1">Dont have account ?</Link>
         </div> 
     )
 }
