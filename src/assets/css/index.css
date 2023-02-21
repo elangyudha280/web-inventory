@@ -9,7 +9,7 @@
         @apply relative w-full h-auto font-poppins;
     }
 
-    .card-login{
+    .card-login,.card-register{
         background:  rgba( 255, 255, 255, 0.4 );
         box-shadow: 0 8px 20px -5px rgba( 31, 38, 135, 0.4 );
         backdrop-filter: blur( 5 );
@@ -22,6 +22,8 @@
         -webkit-backdrop-filter: blur( 2 );
         font-size:0.9em;
         border: 1px solid rgba( 255, 255, 255, 0.2 );
+        
+        @apply  placeholder:text-white text-white border-b-2 bg-transparent  w-full mt-1 px-2 py-2 rounded-md  outline-none;
     }
 
     .btn{
