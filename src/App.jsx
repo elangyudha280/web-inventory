@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 
 // import component Login
-import Login from './Component/Login'
+import ContainerLogin from './Component/ContainerLogin'
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
     <div className="App ">
      
      {/* component Login */}
-    <Login/>
+    <ContainerLogin/>
 
     </div>
   )
