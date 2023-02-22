@@ -2,6 +2,6 @@ import { createContext } from "react";
 
 
 
-const dataToken = createContext()
+const contextToken = createContext()
 
-export default dataToken;
+export default contextToken;
