@@ -12,6 +12,8 @@ import CardRegister from './Component/ComponentLogin/CardRegister'
 import ContainerLogin from './Component/pages/ContainerLogin'
 // import component pages dashboard
 import ContainerDashboard from './Component/pages/ContainerDashboard'
+// component container  home dashboard
+import ContainerHomeDashboard from './Component/ComponentDashboard/ContainerHomeDashboard'
 
 
 // context token
@@ -47,8 +49,10 @@ function App() {
               </Route>
 
                   {/* Router about dashboard */}
-              <Route path='/dashboard' element={<ProtectedDashboard/>}>
-                <Route path='/dashboard' element={<ContainerDashboard/>}/>
+              <Route  element={<ProtectedDashboard/>}>
+                <Route path='/dashboard' element={<ContainerDashboard/>}>
+                  <Route path='/dashboard' element={<ContainerHomeDashboard/>} />
+                </Route>
               </Route>
             </Routes>
         </Router>

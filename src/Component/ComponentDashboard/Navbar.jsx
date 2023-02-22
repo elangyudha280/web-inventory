@@ -48,7 +48,7 @@ const Navbar = ()=>{
         (devideNav) ? setDevideNav(false) : setDevideNav(true)
     }
     return (
-        <nav className="navbar fixed top-0 left-0 w-full py-2 px-4 bg-slate-800 z-5">
+        <nav className="navbar fixed top-0 left-0 w-full py-2 px-4 bg-slate-900 z-[5]">
             <div className="container max-w-6xl relative h-[45px] mx-auto   flex items-center gap-2">
                     <Link to='/dashboard' className="title-nav text-white text-[0.9em] min-[243px]:text-xl">Inverntory Project</Link>
                     <div className="nav-item relative flex-1 w-full h-full  flex justify-end">
