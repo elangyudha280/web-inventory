@@ -53,9 +53,8 @@ const Navbar = ()=>{
                     <Link to='/dashboard' className="title-nav text-white text-[0.9em] min-[243px]:text-xl">Inverntory Project</Link>
                     <div className="nav-item relative flex-1 w-full h-full  flex justify-end">
                     
-                        <img src={profileImg} onClick={toggleDevide} alt="img-profile" className="img-profile overflow-hidden h-full w-[45px] rounded-full cursor-pointer object-cover object-center">
+                        <img src={profileImg} onClick={toggleDevide} alt="img-profile" className="img-profile overflow-hidden h-full w-[45px] rounded-full cursor-pointer object-cover object-center"/>
 
-                        </img>
                         
                         {/* component devide  */}
                         {(devideNav) && <DeviveNav toggleDevideNav={setDevideNav}/>}
