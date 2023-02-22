@@ -10,7 +10,7 @@
     }
 
     .card-login,.card-register{
-        background:  rgba( 255, 255, 255, 0.4 );
+        background:  rgba( 255, 255, 255, 0.2 );
         box-shadow: 0 8px 20px -5px rgba( 31, 38, 135, 0.4 );
         backdrop-filter: blur( 5 );
         -webkit-backdrop-filter: blur( 5 );
@@ -29,4 +29,51 @@
     .btn{
         @apply w-full py-2 mt-4 rounded-md text-white font-[600] bg-gradient-to-r from-[#3a0ca3] to-[#3c096c] border-none ;
     }
+
+
+    .borders {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 25px; 
+  }
+  .borders:after, .borders:before {
+    border: 3px solid #fff;
+    border-radius: 100%;
+    position: absolute;
+    content: '';
+    display: block; }
+  .borders:before {
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    animation: spin .75s infinite linear reverse;
+    height: 5px;
+    width: 5px; }
+  .borders:after {
+    -webkit-animation: spin .5s infinite linear;
+            animation: spin .5s infinite linear;
+    height: 20px;
+    width: 20px;
+    border-right-color: transparent;
+    border-top-color: transparent; }
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+
 }
