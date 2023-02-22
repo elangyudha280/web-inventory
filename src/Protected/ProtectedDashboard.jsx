@@ -9,7 +9,7 @@ const ProtectedDashboard  = ()=>{
 
     let userToken =localStorage.getItem('token'); 
 
-    if(userToken === null && userToken !== dataToken){
+    if(!userToken && userToken !== dataToken){
         return <Navigate to="/" replace/>
     }
     
