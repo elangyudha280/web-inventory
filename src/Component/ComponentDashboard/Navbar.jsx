@@ -25,7 +25,7 @@ const DeviveNav = ({toggleDevideNav})=>{
     return (
      <div className="devide-nav-item absolute right-0 top-[130%] rounded-md overflow-hidden w-[100px]  bg-slate-800  text-white flex flex-col">
             <h2 className="devide-username truncate w-full p-2 ">
-                user 
+                {localStorage.getItem('username')} 
             </h2>
             <button onClick={eventLogout} className="btn-login border-t-[1px] border-slate-500 text-left w-full p-2  outline-none">Logout</button>
     </div>
