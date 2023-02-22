@@ -7,8 +7,7 @@ const ProtectedLogin  = ()=>{
 
     let {dataToken} = useContext(contextToken)
 
-    let userToken =localStorage.getItem('token'); 
-
+    let userToken = localStorage.getItem('token'); 
 
     if(userToken || userToken === dataToken){
         return <Navigate to="/dashboard" replace/>

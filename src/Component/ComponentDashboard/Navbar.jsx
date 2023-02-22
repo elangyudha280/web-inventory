@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState,useContext } from "react";
 import { Link,useNavigate } from "react-router-dom";
 
+// data context token
+import contextToken from "../../Context/contextToken.mjs";
 
 import profileImg from '../../assets/images/bg-login.jpg'
 
@@ -8,7 +10,7 @@ import profileImg from '../../assets/images/bg-login.jpg'
 
 // component devide navbar
 const DeviveNav = ({toggleDevideNav})=>{
-
+    let {dataToken,dispatchToken} = useContext(contextToken);
     
     // navigate logout
     let navLogout = useNavigate()
@@ -19,6 +21,7 @@ const DeviveNav = ({toggleDevideNav})=>{
         toggleDevideNav(false)
         localStorage.removeItem('token')
         localStorage.removeItem('username')
+        dispatchToken({type:'successLogout',payload:{token:null,username:null}})
         navLogout('/')
     }
 

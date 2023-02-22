@@ -7,9 +7,11 @@ const ProtectedDashboard  = ()=>{
 
     let {dataToken} = useContext(contextToken)
 
-    let userToken =localStorage.getItem('token'); 
+    let localToken =localStorage.getItem('token'); 
 
-    if(!userToken && userToken !== dataToken){
+
+    
+    if(!localToken && localToken !== dataToken){
         return <Navigate to="/" replace/>
     }
     
