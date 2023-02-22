@@ -1,9 +1,18 @@
 
 import { useEffect,useContext,useState } from "react";
+
+// data context token
 import contextToken from "../../Context/contextToken.mjs";
+
 import { Link,useNavigate } from "react-router-dom";
+
+// component span invalid note:untuk ketika input invalid
 import SpanInvalid from "../componentModal/spanInvalid";
+
+// package validator
 import validator from "validator";
+
+// component loading
 import Loading from "../ComponentLoading/Loading.jsx";
 
 
@@ -15,7 +24,7 @@ const CardLogin = ()=>{
     // state token 
     let {dispatchToken} = useContext(contextToken);
 
-    // input email
+    // state input email dan password
     let [email,setEmail] = useState('')
     let [password,setPassword] = useState('')
 
@@ -37,11 +46,17 @@ const CardLogin = ()=>{
     // event login
     const requestLogin = (e)=>{
         e.preventDefault()
+
+        // set loading true
         setLoading(true)
+
+        // set email vallidation error
         setEmailError(false)
+
+        // set validate password error
         setPasswordError(false)
 
-
+        // data form input
         let datasForm = {
             email,
             password
@@ -57,23 +72,32 @@ const CardLogin = ()=>{
         }).then(e => e.json())
         .then(user => {
 
-            // check apakah usernya tidak ada
+            // check apakah usernya tidak ditemukan
             if(user.msg){
-                // check apakah data user atau password yang tidak ditemukan
-                if(user.msg === 'User tidak di temukan!'){
-                    setEmailError(true)
-                    setPasswordError(false)
-                    return
-                }
+                
+                    // jika user tidak ditemukan
+                    if(user.msg === 'User tidak di temukan!'){
+                        setEmailError(true)
+                        setPasswordError(false)
+                        return
+                    }
+
+                    // jika password tidak ditemukan
                     setEmailError(false)
                     setPasswordError(true)
                     return
             }
-            
+
             setEmailError(false)
             setPasswordError(false);
+
+            // set token for localStorage
             localStorage.setItem('token',user.token)
+
+            // action or update data contextToken
             dispatchToken({type:'successLogin',payload:user.token})
+
+            // arahkan ke halaman dashboard
             toDashboard('/dashboard')
             return
         })

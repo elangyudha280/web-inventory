@@ -6,6 +6,7 @@ import validator from "validator";
 
 // component span invalid 
 import SpanInvalid from "../componentModal/spanInvalid";
+// component loading
 import Loading from "../ComponentLoading/Loading.jsx";
 
 
@@ -15,6 +16,7 @@ const CardRegister = ()=>{
         //  dispatch login
         let {dispatchLogin} = useContext(ContextLogin)
 
+        // state data input
         let [firstname,setFirstName] = useState('')
         let [lastName,setLastName] = useState('')
         let [email,setEmail] = useState('')
@@ -57,19 +59,26 @@ const CardRegister = ()=>{
                         return e.json()
                       })
                       .then(e=> {
+                        // check jika error maka tampilkan pesan error
                          if(e.error){
                                 setValidateError(true)        
                         return 
                         }   
+
+                        // jika berhasil
+                        // arahkan ke halaman login 
                         toLogin('/')
 
+                        // hilangkan pesan errors
                         setValidateError(false)
+                        
+                        // tampilkan modal success register
                         setTimeout(() => {
                         dispatchLogin({type:'showModalSuccess'})
                         }, 100);
                 })
                       .catch(e=>{
-                        alert(e)
+                        return e
                       })
                       .finally(()=>{
                         setLoading(false)

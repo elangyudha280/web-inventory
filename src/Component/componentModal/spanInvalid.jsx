@@ -1,6 +1,6 @@
 
 
-
+// component span invalid 
 const SpanInvalid = ({msg})=>{
     return (
         <>

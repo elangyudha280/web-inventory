@@ -1,11 +1,9 @@
 
 
-
+// component loading
 const Loading = ()=>{
         return (
-            <div className="borders">
-                
-            </div>
+            <div className="borders"></div>
         )
 }
 

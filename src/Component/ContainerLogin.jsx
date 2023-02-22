@@ -14,12 +14,13 @@ import LoginReducer from "../Context/reducer/LoginReducer.js";
 import ModalSuccess from "./componentModal/ModalSuccess";
 
 
+// data awal modal state untuk reducer Login
 let initialState = {
     modalCheck:false
 }
 
 const Login = ()=>{
-
+    // data terkait Login dan Register page
     let [dataLogin,dispatchLogin] = useReducer(LoginReducer,initialState)
 
 

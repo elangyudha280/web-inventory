@@ -32,6 +32,7 @@ function App() {
      <contextToken.Provider value={{dataToken,dispatchToken}}>
       <Router>  
             <Routes>
+              {/* router about Login */}
               <Route  element={<ProtectedLogin/>}>
                 <Route path='/' element={<ContainerLogin/>}>
                     <Route path='/' element={<CardLogin/>}/>
@@ -39,6 +40,7 @@ function App() {
                 </Route>
               </Route>
 
+                  {/* Router about dashboard */}
               <Route path='/dashboard' element={<ProtectedDashboard/>}>
                 <Route path='/dashboard' element={<p>halaman dashboard</p>}/>
               </Route>
