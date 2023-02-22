@@ -12,7 +12,7 @@ import Loading from "../ComponentLoading/Loading.jsx";
 
 const CardRegister = ()=>{
 
-        // import dispatch login
+        //  dispatch login
         let {dispatchLogin} = useContext(ContextLogin)
 
         let [firstname,setFirstName] = useState('')
