@@ -25,6 +25,10 @@ const CardRegister = ()=>{
         let [loading,setLoading] =useState(false)
         let [validateError,setValidateError] = useState(false)
 
+
+        // state check server error
+        let [serverError,setResponseError] = useState(false)
+
         // navigate
         let toLogin = useNavigate()
 
@@ -78,7 +82,8 @@ const CardRegister = ()=>{
                         }, 100);
                 })
                       .catch(e=>{
-                        return e
+                        alert('server error,silahkan coba lagi nanti')
+                        console.log('server not response')
                       })
                       .finally(()=>{
                         setLoading(false)

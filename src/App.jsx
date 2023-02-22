@@ -6,16 +6,17 @@ import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
 import CardLogin from './Component/ComponentLogin/CardLogin'
 // import component card Register
 import CardRegister from './Component/ComponentLogin/CardRegister'
-// import component Login
-import ContainerLogin from './Component/ContainerLogin'
+// import component Pages Login
+import ContainerLogin from './Component/pages/ContainerLogin'
 
-import { ProtectedLogin } from './Protected/ProtectedLogin'
 
 // context token
 import contextToken from './Context/contextToken.mjs'
 
 // fungsi reducer token
 import TokenReducer from './Context/reducer/TokenReducer'
+
+import { ProtectedLogin } from './Protected/ProtectedLogin'
 import { ProtectedDashboard } from './Protected/ProtectedDashboard'
 
 let initialToken = {

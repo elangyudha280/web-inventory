@@ -4,14 +4,14 @@ import { Outlet } from "react-router-dom";
 import { useReducer } from "react";
 
 // import context login
-import { ContextLogin } from "../Context/login.mjs";
+import { ContextLogin } from "../../Context/login.mjs";
 
 // import fungsi reducer login
-import LoginReducer from "../Context/reducer/LoginReducer.js";
+import LoginReducer from "../../Context/reducer/LoginReducer.js";
 
 
 // component modal success
-import ModalSuccess from "./componentModal/ModalSuccess";
+import ModalSuccess from "../componentModal/ModalSuccess";
 
 
 // data awal modal state untuk reducer Login
