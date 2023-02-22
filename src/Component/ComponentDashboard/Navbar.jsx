@@ -18,6 +18,7 @@ const DeviveNav = ({toggleDevideNav})=>{
     let eventLogout = ()=>{
         toggleDevideNav(false)
         localStorage.removeItem('token')
+        localStorage.removeItem('username')
         navLogout('/')
     }
 

@@ -24,7 +24,8 @@ import { ProtectedLogin } from './Protected/ProtectedLogin'
 import { ProtectedDashboard } from './Protected/ProtectedDashboard'
 
 let initialToken = {
-  token:null
+  token:null,
+  username:null
 }
 
 function App() {

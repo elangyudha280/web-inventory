@@ -70,13 +70,13 @@ const CardLogin = ()=>{
             },
             body:JSON.stringify(datasForm)
         }).then(e => e.json())
-        .then(user => {
+        .then(ResponseUser => {
 
             // check apakah usernya tidak ditemukan
-            if(user.msg){
+            if(ResponseUser.msg){
                 
                     // jika user tidak ditemukan
-                    if(user.msg === 'User tidak di temukan!'){
+                    if(ResponseUser.msg === 'User tidak di temukan!'){
                         setEmailError(true)
                         setPasswordError(false)
                         return
@@ -92,10 +92,14 @@ const CardLogin = ()=>{
             setPasswordError(false);
 
             // set token for localStorage
-            localStorage.setItem('token',user.token)
+            localStorage.setItem('token',ResponseUser.token)
+
+            // set local storage usename user
+            localStorage.setItem('username',ResponseUser.user.firstName)
 
             // action or update data contextToken
-            dispatchToken({type:'successLogin',payload:user.token})
+            dispatchToken({type:'successLogin',payload:{token:ResponseUser.token,username:ResponseUser.user.firtName
+            }})
 
             // arahkan ke halaman dashboard
             toDashboard('/dashboard')
