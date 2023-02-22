@@ -6,8 +6,12 @@ import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
 import CardLogin from './Component/ComponentLogin/CardLogin'
 // import component card Register
 import CardRegister from './Component/ComponentLogin/CardRegister'
+
+
 // import component Pages Login
 import ContainerLogin from './Component/pages/ContainerLogin'
+// import component pages dashboard
+import ContainerDashboard from './Component/pages/ContainerDashboard'
 
 
 // context token
@@ -43,7 +47,7 @@ function App() {
 
                   {/* Router about dashboard */}
               <Route path='/dashboard' element={<ProtectedDashboard/>}>
-                <Route path='/dashboard' element={<p>halaman dashboard</p>}/>
+                <Route path='/dashboard' element={<ContainerDashboard/>}/>
               </Route>
             </Routes>
         </Router>
