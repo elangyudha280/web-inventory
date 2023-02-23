@@ -1,8 +1,15 @@
-
-
+import dataDashboard from "../../../Context/contextDashboard.mjs";
+import { useContext,useEffect,useState } from "react";
 
 
 const BookInfo = ()=>{
+
+    let {dataBuku,checkUpdate} = useContext(dataDashboard)
+
+    // state jumlah product
+    let [jumlahProduct,setJumlahProduct] = useState(0)
+  
+
     return (
         <div className="container-book-info   relative w-full grid  gap-2  sm:grid-cols-[1fr_1fr]   auto-rows-auto place-items-center lg:grid-cols-[1fr_1fr_1fr]">
         <div className="card-info-book w-full  py-5 px-3 flex-1 border-2 rounded-xl bg-slate-800 overflow-hidden ">

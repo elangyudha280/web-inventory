@@ -21,6 +21,7 @@ const ContainerDetailBuku = ()=>{
           return newDate.toLocaleDateString("id-ID", options);
         };
         useEffect(() => {
+            document.title = 'detail page'
             if (id) {
               fetch(`https://serverinventory-ramdhey.koyeb.app/inventory/${id}`)
                 .then((res) => res.json())
@@ -41,8 +42,8 @@ const ContainerDetailBuku = ()=>{
    
 
     return (
-        <section className="container-detail-buku  pt-[100px] px-4 pb-5 overflow-x-hidden overflow-y-auto z-[1] relative w-full h-[100vh] border-2 border-red-500">
-            <div className=" relative max-w-6xl mx-auto border-2 border-red-600">
+        <section className="container-detail-buku  pt-[100px] px-4 pb-5 overflow-x-hidden overflow-y-auto z-[1] relative w-full h-[100vh] ">
+            <div className=" relative max-w-6xl mx-auto">
                     <div className="flex">
                         <Link to='/dashboard' className='px-5 text-white py-2 bg-blue-500 rounded-md'>
                             back
@@ -60,7 +61,6 @@ const ContainerDetailBuku = ()=>{
                          <h4 className=""><span className="capitalize font-semibold">laporan dibuat :</span> {dateFormat(createdAt)}</h4>  
                         <h4 className=""><span className="capitalize font-semibold">laporan diUpdate:</span> {dateFormat(createdAt)}</h4>  
 
-                            <Link to='/dashboard' className="btn-edit grid place-items-center w-[100px] rounded-md text-white py-2 bg-yellow-500">edit</Link>
                     </div>
                 </div>
             </div>

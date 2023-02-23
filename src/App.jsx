@@ -25,6 +25,7 @@ import TokenReducer from './Context/reducer/TokenReducer'
 import { ProtectedLogin } from './Protected/ProtectedLogin'
 import { ProtectedDashboard } from './Protected/ProtectedDashboard'
 import ContainerDetailBuku from './Component/ComponentDashboard/ContainerDetailBuku'
+import ContainerEditBuku from './Component/ComponentDashboard/ContainerEditBuku'
 
 let initialToken = {
   token:null,
@@ -54,6 +55,7 @@ function App() {
                 <Route path='/dashboard' element={<ContainerDashboard/>}>
                   <Route path='/dashboard' element={<ContainerHomeDashboard/>} />
                   <Route path='detail/:id' element={<ContainerDetailBuku/>} />
+                  <Route path='edit/:id' element={<ContainerEditBuku/>} />
                 </Route>
               </Route>
             </Routes>
