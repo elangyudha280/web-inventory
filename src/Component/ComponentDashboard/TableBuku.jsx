@@ -19,7 +19,7 @@ const TableBuku = ({id,namaBuku,categoryBuku,hargaBuku,StockBuku})=>{
     Rp.{parseToRupiah(hargaBuku)}
 </td>
 <td className="px-6 py-4">
-   {StockBuku}
+   {parseToRupiah(StockBuku)}
 </td>
 <td className="px-6 py-4 flex justify-start gap-2">
     <Link to='/detail' className="font-medium hover:underline  text-blue-600 dark:text-blue-500">Detail</Link>
