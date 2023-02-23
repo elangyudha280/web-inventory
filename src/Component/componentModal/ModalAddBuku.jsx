@@ -54,12 +54,9 @@ const ModalAddBuku = ()=>{
                             <div className="flex-1">
                                 <label htmlFor="category" className="block mt-2 mb-2 text-sm font-medium text-gray-900 dark:text-white">Category Buku</label>
                                 <select className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" disabled={(loadingForm) ? true : false} name="category" id="category" required>
-                                    
-                                    {
-                                      (loadingForm) ? <option defaultValue=''>loading...</option> :   dataBuku.map((e,i)=>{
-                                        return <option key={i+1} defaultValue={e.category} >{e.category}</option>
-                                    })
-                                    }
+                                    <option defaultValue='buku cerita'>buku cerita</option>
+                                    <option defaultValue='buku fiksi'>buku fiksi</option>
+                                    <option defaultValue='buku novel'>buku novel</option>
                                 </select>
                             </div>
                             <div className="flex-1">
