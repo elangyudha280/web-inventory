@@ -81,7 +81,7 @@ const ContainerHomeDashboard = ()=>{
                                      <td className="text-center p-2" colSpan={5}>data kosong</td>
                                      </tr>) :
                                 dataBuku.map((e,i)=>{
-                                    return <TableBuku key={e._id} id={i+1} namaBuku={e.name} categoryBuku={e.category} hargaBuku={e.price} StockBuku={e.stock}/>
+                                    return <TableBuku key={e._id} id={i+1} idDelete={e._id} namaBuku={e.name} categoryBuku={e.category} hargaBuku={e.price} StockBuku={e.stock}/>
                                 })
                             }
                         </tbody>

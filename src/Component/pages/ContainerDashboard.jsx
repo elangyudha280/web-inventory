@@ -7,6 +7,7 @@ import Navbar from "../ComponentDashboard/Navbar";
 
 // component modal Add Buku
 import ModalAddBuku from "../componentModal/ModalAddBuku.jsx";
+import ModalDeleteBuku from "../componentModal/ModalDeleteBuku.jsx";
 
 
 const ContainerDashboard = ()=>{
@@ -19,6 +20,10 @@ const ContainerDashboard = ()=>{
     let [loading,setLoading] = useState(true)
     // state modal add buku
     let [modalAddBuku,setModalAddBuku] = useState(false)
+    // state modal delete bukut
+    let [modalDeleteBuku,setModalDeleteBuku] = useState(false)
+    // state id modal
+    let [idModal,setIdModal] = useState('')
 
     let detail = {
         dataBuku,
@@ -28,7 +33,11 @@ const ContainerDashboard = ()=>{
         loading,
         setLoading,
         modalAddBuku,
-        setModalAddBuku
+        setModalAddBuku,
+        modalDeleteBuku,
+        setModalDeleteBuku,
+        idModal,
+        setIdModal
     }
    
 useEffect(()=>{
@@ -61,6 +70,10 @@ useEffect(()=>{
             {/* component modal add buku */}
             {
                 (modalAddBuku) && <ModalAddBuku/>
+            }
+            {/* component modal delete buku */}
+            {
+                (modalDeleteBuku) && <ModalDeleteBuku/>
             }
          </section>
        </dataDashboard.Provider>
