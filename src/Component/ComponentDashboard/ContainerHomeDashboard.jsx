@@ -1,3 +1,10 @@
+
+import { useContext, useEffect } from "react";
+
+// import context dashboard
+import dataDashboard from "../../Context/contextDashboard.mjs";
+
+
 // component book info
 import BookInfo from "./ComponentHomeDashboard/BookInfo";
 // component table buku
@@ -6,6 +13,12 @@ import TableBuku from "./TableBuku";
 
 
 const ContainerHomeDashboard = ()=>{
+
+    // data context 
+    let {dataBuku,setDataBuku,loading,setLoading} = useContext(dataDashboard)
+
+  
+
     return (
         <section className="container-home  pt-[100px] px-4 pb-5 overflow-x-hidden overflow-y-auto z-[1] relative w-full h-[100vh] border-2 border-red-500">
             <section className="sub-container mx-auto relative max-w-6xl ">
@@ -55,7 +68,15 @@ const ContainerHomeDashboard = ()=>{
                             </tr>
                         </thead>
                         <tbody>
-                        
+                            {
+                                (loading) ? (<tr>
+                                     <td className="text-center p-2" colSpan={5}>loading...</td>
+                                    </tr>):
+                                (dataBuku.length === 0) ? (<tr>
+                                     <td className="text-center p-2" colSpan={5}>data kosong</td>
+                                     </tr>) :
+                                <TableBuku/>
+                            }
                         </tbody>
                     </table>
                 </div>
