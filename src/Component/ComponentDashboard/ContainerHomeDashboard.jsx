@@ -1,5 +1,7 @@
 // component book info
 import BookInfo from "./ComponentHomeDashboard/BookInfo";
+// component table buku
+import TableBuku from "./TableBuku";
 
 
 
@@ -12,7 +14,7 @@ const ContainerHomeDashboard = ()=>{
                 {/* component card book item */}
                 <div className="container-card-book-item mt-10 relative w-full ">
                   
-                <div className="flex items-center justify-between border-2 gap-2 border-red-600 mb-4 p-1">
+                <div className="flex items-center justify-between  gap-2 mb-4 p-1">
                             <label htmlFor="table-search" className="sr-only">Search</label>
                             <div className="relative flex-1">
                                 <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -27,50 +29,8 @@ const ContainerHomeDashboard = ()=>{
                 </div>
 
                    
-<div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-    <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-                <th scope="col" className="px-6 py-3">
-                    no
-                </th>
-                <th scope="col" className="px-6 py-3">
-                    Product name
-                </th>
-                <th scope="col" className="px-6 py-3">
-                    category buku
-                </th>
-                <th scope="col" className="px-6 py-3">
-                    Price
-                </th>
-                <th scope="col" className="px-6 py-3">
-                    Action
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-                <th scope="row" className="px-6 broder-2  py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        1
-                    </th>
-                <td scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap truncate dark:text-white r">
-                    Apple MacBook Pro 17"
-                </td>
-                <td className="px-6 py-4">
-                    category buku
-                </td>
-                <td className="px-6 py-4">
-                    $2999
-                </td>
-                <td className="px-6 py-4">
-                    <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-
+                {/* component table buku */}
+                <TableBuku/>
                   
 
                 </div>
