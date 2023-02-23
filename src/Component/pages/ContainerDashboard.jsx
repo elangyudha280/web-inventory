@@ -5,6 +5,9 @@ import dataDashboard from "../../Context/contextDashboard.mjs";
 // component navbar
 import Navbar from "../ComponentDashboard/Navbar";
 
+// component modal Add Buku
+import ModalAddBuku from "../componentModal/ModalAddBuku.jsx";
+
 
 const ContainerDashboard = ()=>{
 
@@ -14,6 +17,8 @@ const ContainerDashboard = ()=>{
     let [checkUpdate,setCheckUpdate] = useState(false)
     // state loading
     let [loading,setLoading] = useState(true)
+    // state modal add buku
+    let [modalAddBuku,setModalAddBuku] = useState(false)
 
     let detail = {
         dataBuku,
@@ -21,7 +26,9 @@ const ContainerDashboard = ()=>{
         checkUpdate,
         setCheckUpdate,
         loading,
-        setLoading
+        setLoading,
+        modalAddBuku,
+        setModalAddBuku
     }
    
 useEffect(()=>{
@@ -50,7 +57,12 @@ useEffect(()=>{
          <section className="container-dashboard relative w-full h-screen bg-slate-200">
             <Navbar/>
             <Outlet/>
-        </section>
+
+            {/* component modal add buku */}
+            {
+                (modalAddBuku) && <ModalAddBuku/>
+            }
+         </section>
        </dataDashboard.Provider>
     )
 }
