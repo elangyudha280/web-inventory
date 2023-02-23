@@ -17,7 +17,9 @@ const ContainerHomeDashboard = ()=>{
     // data context 
     let {dataBuku,setDataBuku,loading,setLoading} = useContext(dataDashboard)
 
-  
+  useEffect(()=>{
+    console.log(dataBuku)
+  },[])
 
     return (
         <section className="container-home  pt-[100px] px-4 pb-5 overflow-x-hidden overflow-y-auto z-[1] relative w-full h-[100vh] border-2 border-red-500">
@@ -63,6 +65,9 @@ const ContainerHomeDashboard = ()=>{
                                     Price
                                 </th>
                                 <th scope="col" className="px-6 py-3">
+                                    Stock buku
+                                </th>
+                                <th scope="col" className="px-6 py-3">
                                     Action
                                 </th>
                             </tr>
@@ -75,7 +80,9 @@ const ContainerHomeDashboard = ()=>{
                                 (dataBuku.length === 0) ? (<tr>
                                      <td className="text-center p-2" colSpan={5}>data kosong</td>
                                      </tr>) :
-                                <TableBuku/>
+                                dataBuku.map((e,i)=>{
+                                    return <TableBuku key={e._id} id={i+1} namaBuku={e.name} categoryBuku={e.category} hargaBuku={e.price} StockBuku={e.stock}/>
+                                })
                             }
                         </tbody>
                     </table>

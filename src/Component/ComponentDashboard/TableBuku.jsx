@@ -1,22 +1,25 @@
 import { Link } from "react-router-dom";
+import parseToRupiah from "../../modules/parseToRupiah.mjs";
 
-
-const TableBuku = ()=>{
+const TableBuku = ({id,namaBuku,categoryBuku,hargaBuku,StockBuku})=>{
     return (
        
 
 <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
 <th scope="row" className="px-3   py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-        1
+        {id}
     </th>
 <td scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap truncate dark:text-white r">
-    Apple MacBook Pro 17"
+  {namaBuku}
 </td>
 <td className="px-6 py-4">
-    category buku
+    {categoryBuku}
 </td>
 <td className="px-6 py-4">
-    $2999
+    Rp.{parseToRupiah(hargaBuku)}
+</td>
+<td className="px-6 py-4">
+   {StockBuku}
 </td>
 <td className="px-6 py-4 flex justify-start gap-2">
     <Link to='/detail' className="font-medium hover:underline  text-blue-600 dark:text-blue-500">Detail</Link>
