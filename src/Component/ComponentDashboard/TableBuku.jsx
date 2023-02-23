@@ -13,7 +13,7 @@ const TableBuku = ()=>{
                         Product name
                     </th>
                     <th scope="col" className="px-6 py-3">
-                        category buku
+                        category
                     </th>
                     <th scope="col" className="px-6 py-3">
                         Price
@@ -37,8 +37,11 @@ const TableBuku = ()=>{
                     <td className="px-6 py-4">
                         $2999
                     </td>
-                    <td className="px-6 py-4">
+                    <td className="px-6 py-4 flex justify-start gap-2">
                         <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                        <button className="btn-delete-buku text-red-400 font-medium hover:underline">
+                            Delete
+                        </button>
                     </td>
                 </tr>
             </tbody>

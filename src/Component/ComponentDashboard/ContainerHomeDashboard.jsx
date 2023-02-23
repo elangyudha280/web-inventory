@@ -22,10 +22,13 @@ const ContainerHomeDashboard = ()=>{
                                 </div>
                                 <input type="text" id="table-search" className="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-full min-[500px]:w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for items"/>
                             </div>
-                            <select name="" id="" className="px-2 h-[40px] min-[500px]:h-[40px] bg-blue-700 rounded-lg text-white" >
+                       <div className="flex gap-2 ">
+                        <button className="btn-add-buku px-3 rounded-md bg-yellow-500 text-white">Add</button>
+                       <select name="" id="" className="px-2 h-[40px] min-[500px]:h-[40px] bg-blue-700 rounded-lg text-white" >
                                 <option>filter buku</option>
                                 <option value="buku_fiksi" className="truncate">bukufiksi</option>
                             </select>
+                       </div>
                 </div>
 
                    
