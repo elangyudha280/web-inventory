@@ -97,6 +97,9 @@ const CardLogin = ()=>{
             // set local storage usename user
             localStorage.setItem('username',ResponseUser.user.firstName)
 
+              // set local storage img user
+              localStorage.setItem('imgUser',ResponseUser.user.picturePath.url)
+
             // action or update data contextToken
             dispatchToken({type:'successLogin',payload:{token:ResponseUser.token,username:ResponseUser.user.firtName
             }})

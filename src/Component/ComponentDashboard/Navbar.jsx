@@ -4,7 +4,6 @@ import { Link,useNavigate } from "react-router-dom";
 // data context token
 import contextToken from "../../Context/contextToken.mjs";
 
-import profileImg from '../../assets/images/bg-login.jpg'
 
 
 
@@ -21,6 +20,7 @@ const DeviveNav = ({toggleDevideNav})=>{
         toggleDevideNav(false)
         localStorage.removeItem('token')
         localStorage.removeItem('username')
+        localStorage.removeItem('imgUser')
         dispatchToken({type:'successLogout',payload:{token:null,username:null}})
         navLogout('/')
     }
@@ -53,7 +53,7 @@ const Navbar = ()=>{
                     <Link to='/dashboard' className="title-nav text-white text-[0.9em] min-[243px]:text-xl">Inverntory Project</Link>
                     <div className="nav-item relative flex-1 w-full h-full  flex justify-end">
                     
-                        <img src={profileImg} onClick={toggleDevide} alt="img-profile" className="img-profile overflow-hidden h-full w-[45px] rounded-full cursor-pointer object-cover object-center"/>
+                        <img src={localStorage.getItem('imgUser')} onClick={toggleDevide} alt="img-profile" className="img-profile overflow-hidden h-full w-[45px] rounded-full cursor-pointer object-cover object-center"/>
 
                         
                         {/* component devide  */}
