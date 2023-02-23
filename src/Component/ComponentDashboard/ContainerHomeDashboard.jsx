@@ -20,10 +20,14 @@ const ContainerHomeDashboard = ()=>{
                             <select name="" id="" className="px-2 h-[40px] min-[500px]:h-full bg-blue-700 rounded-lg text-white" >
                                 <option>filter buku</option>
                                 <option value="buku_fiksi" className="truncate">bukufiksi</option>
-
                             </select>
                         </div>
                     </nav>
+
+                    {/* component card item book */}
+                    <div className="container-card-item relative w-full border-2 border-red-600 grid mt-5">
+
+                    </div>
 
                 </div>
             </section>
