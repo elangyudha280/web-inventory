@@ -22,7 +22,7 @@ const ContainerHomeDashboard = ()=>{
   },[])
 
     return (
-        <section className="container-home  pt-[100px] px-4 pb-5 overflow-x-hidden overflow-y-auto z-[1] relative w-full h-[100vh] border-2 border-red-500">
+        <section className="container-home  pt-[100px] px-4 pb-5 overflow-x-hidden overflow-y-auto z-[1] relative w-full h-[100vh] ">
             <section className="sub-container mx-auto relative max-w-6xl ">
                   <BookInfo/>
 

@@ -36,8 +36,8 @@ const TableBuku = ({id,idDelete,namaBuku,categoryBuku,hargaBuku,StockBuku})=>{
    {parseToRupiah(StockBuku)}
 </td>
 <td className="px-6 py-4 flex justify-start gap-2">
-    <Link to='/detail' className="font-medium hover:underline  text-blue-600 dark:text-blue-500">Detail</Link>
-    <Link href="#" className="font-medium text-orange-500 dark:text-orange-500  hover:underline">Edit</Link>
+    <Link to={`detail/${idDelete}`} className="font-medium hover:underline  text-blue-600 dark:text-blue-500">Detail</Link>
+    <Link to={`edit/${idDelete}`} className="font-medium text-orange-500 dark:text-orange-500  hover:underline">Edit</Link>
     <button onClick={setIdModalDelete} className="btn-delete-buku grid place-items-center text-red-400 font-medium hover:underline" data-delete={idDelete}>
         Delete
     </button>
